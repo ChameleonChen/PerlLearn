@@ -1,0 +1,32 @@
+--- 
+desc: 
+  cn: "\xE9\x99\x8C\xE9\x99\x8C \xE5\xBA\x94\xE7\x94\xA8"
+  en: momo_Application_HTTPS
+desc_version: 2
+detect_version: 2
+enable: 'true'
+encrypt: 'false'
+fidelity: 50
+l4protocol: tcp
+name: 
+  cn: "\xE9\x99\x8C\xE9\x99\x8C \xE5\xBA\x94\xE7\x94\xA8"
+  en: momo_Application_HTTPS
+performance: 30
+popularity: 80
+priority: 20
+rule_option: 
+  app: https
+  session_dir: any
+rule_type: ac-sig
+signature: 
+  - 
+    - 
+      ac: 
+        pattern: 
+          - immomo.com
+  - 
+    - 
+      ac: 
+        pattern: 
+          - "|696d6d6f6d6f2e636f6d2e636f6d|"
+tunnel: 'false'

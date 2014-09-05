@@ -1,0 +1,36 @@
+  ######base info######
+  name: 
+    en: momo_Application_HTTPS
+    cn: 陌陌 应用
+  desc: 
+    en: momo_Application_HTTPS
+    cn: 陌陌 应用
+  desc_version: 2
+  detect_version: 2
+  fidelity: 50
+  popularity : 80
+  performance: 30
+  enable: true
+  priority: 20
+  
+  ######extend info######
+  tunnel: false
+  encrypt: false
+  
+  ######detect info######
+  rule_type: ac-sig
+  l4protocol: tcp
+  rule_option:
+    session_dir : any
+    app: https
+  signature:
+    -
+      -
+        ac:
+          pattern: 
+            - immomo.com
+    -
+      -
+        ac:
+          pattern: 
+            - |696d6d6f6d6f2e636f6d2e636f6d|
