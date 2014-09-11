@@ -1,0 +1,68 @@
+  ######service_tree info######
+  service_tree_version: 1
+  appclass: System_Tools//91_Assistant
+  appclass_cmcc: Other_Service//91_Assistant
+  
+  ######base info######
+  name:
+    en: 91_Assistant_Download_HTTP
+    cn: 91助手 下载
+  desc:
+    en: 91_Assistant_Download_HTTP
+    cn: 91助手 下载
+  desc_version: 1
+  detect_version: 2
+  fidelity: 50
+  popularity : 30
+  performance: 30
+  enable: true
+  priority: 20
+  #manufacture_en: Baidu
+  #manufacture_cn: 百度
+  manufacture: Baidu
+  
+  ######extend info######
+  tunnel: false
+  encrypt: false
+
+  ######detect info######
+  rule_type: ac-sig
+  l4protocol: tcp
+  rule_option:
+    session_dir : request
+    app: http
+  signature:
+    -
+      -
+        ac:
+          pattern:
+            - bbx2.sj.91.com
+            - applebbx.sj.91.com
+          position: subheader
+          header_name: Host
+      -
+        content:
+          pattern:
+            - /softs.ashx?act=207
+          position: http_uri 
+          offset: 0 
+    -
+      -
+        ac:
+          pattern:
+            - applebbx.sj.91.com
+          position: subheader
+          header_name: Host
+      -
+        content:
+          pattern:
+            - /soft/phone/detail
+          position: http_uri 
+          offset: 0          
+    -
+      -
+        ac:
+          pattern:
+            - app.msn.com.cn
+          position: subheader
+          header_name: Host

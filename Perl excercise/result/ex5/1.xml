@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<software_mapping generated="Wed Sep  3 03:21:15 2014">
+  <h3c_app_id id="1134">
+    <h3c_app_name>Media_File_Format_UDP_Stream</h3c_app_name>
+    <cmcc_class_name>主流互联网公知协议(Internet_Protocol)</cmcc_class_name>
+    <cmcc_class_id>22</cmcc_class_id>
+    <cmcc_sofware_name>其他协议</cmcc_sofware_name>
+    <cmcc_sofware_id>12</cmcc_sofware_id>
+    <cmcc_protocol>Other_Protocol</cmcc_protocol>
+  </h3c_app_id>
+  <h3c_app_id id="1036">
+    <h3c_app_name>Thunder_Application_General_HTTP_Steram</h3c_app_name>
+    <cmcc_class_name>P2P(P2P)</cmcc_class_name>
+    <cmcc_class_id>12</cmcc_class_id>
+    <cmcc_sofware_name>迅雷</cmcc_sofware_name>
+    <cmcc_sofware_id>26</cmcc_sofware_id>
+    <cmcc_protocol>Other_Protocol</cmcc_protocol>
+    <cmcc_xdr_code>109</cmcc_xdr_code>
+  </h3c_app_id>
+</software_mapping>  

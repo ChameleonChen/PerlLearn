@@ -1,0 +1,18 @@
+$VAR1 = {
+          '1134' => {
+                    'cmcc_class_id' => '45',
+                    'cmcc_sofware_id' => '67',
+                    'h3c_app_name' => 'Media_File_Format_UDP_Stream',
+                    'cmcc_class_name' => "\x{4e3b}\x{6d41}\x{4e92}\x{8054}\x{7f51}\x{516c}\x{77e5}\x{534f}\x{8bae}(Internet_Protocol)",
+                    'cmcc_sofware_name' => "\x{5176}\x{4ed6}\x{534f}\x{8bae}",
+                    'cmcc_protocol' => 'Other_Protocol'
+                  },
+          '1036' => {
+                    'cmcc_protocol' => 'Other_Protocol',
+                    'h3c_app_name' => 'Thunder_Application_General_HTTP_Steram',
+                    'cmcc_class_name' => 'P2P(P2P)',
+                    'cmcc_sofware_name' => "\x{8fc5}\x{96f7}",
+                    'cmcc_class_id' => '12',
+                    'cmcc_sofware_id' => '26'
+                  }
+        };

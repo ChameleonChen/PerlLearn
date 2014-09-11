@@ -1,0 +1,40 @@
+  ######service_tree info######
+  service_tree_version: 1
+  appclass: IM//Tencent_QQ
+  appclass_cmcc: IM//Tencent_QQ
+  
+  ######base info######
+  name: 
+    en: Tencent_QQ_Send_Text_HTTPS_1
+    cn: 腾讯QQ发送文字HTTPS特征1
+  desc: 
+    en: Tencent QQ Send Text
+    cn: 腾讯QQ发送文字
+  desc_version: 1
+  detect_version: 1
+  fidelity: 50
+  popularity : 100
+  performance: 30
+  enable: true
+  priority: 20
+  
+  ######extend info######
+  tunnel: false
+  encrypt: false
+  
+  ######detect info######
+  rule_type: ac-sig
+  l4protocol: tcp
+  rule_option:
+    session_dir : request
+    app: https
+  signature:
+    -
+      -
+        ac:
+          pattern: 
+            - .qq.com
+      -
+        regex:
+          pcre: 
+            - (?is)^\x16.{4}\x01.*\x00\x33\x00\x32\x00\x45\x00\x39\x00\x38.*web\d*\.qq\.com

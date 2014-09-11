@@ -1,0 +1,83 @@
+$VAR1 = {
+          'priority' => '20',
+          'service_tree_version' => '1',
+          'rule_type' => 'ac-sig',
+          'popularity' => '30',
+          'desc_version' => '1',
+          'detect_version' => '2',
+          'desc' => {
+                      'en' => '91_Assistant_Download_HTTP',
+                      'cn' => '91助手 下载'
+                    },
+          'enable' => 'true',
+          'encrypt' => 'false',
+          'rule_option' => {
+                             'app' => 'http',
+                             'session_dir' => 'request'
+                           },
+          'name' => {
+                      'en' => '91_Assistant_Download_HTTP',
+                      'cn' => '91助手 下载'
+                    },
+          'fidelity' => '50',
+          'appclass' => 'System_Tools//91_Assistant',
+          'signature' => [
+                           [
+                             {
+                               'ac' => {
+                                         'pattern' => [
+                                                        'bbx2.sj.91.com',
+                                                        'applebbx.sj.91.com'
+                                                      ],
+                                         'header_name' => 'Host',
+                                         'position' => 'subheader'
+                                       }
+                             },
+                             {
+                               'content' => {
+                                              'pattern' => [
+                                                             '/softs.ashx?act=207'
+                                                           ],
+                                              'position' => 'http_uri',
+                                              'offset' => '0'
+                                            }
+                             }
+                           ],
+                           [
+                             {
+                               'ac' => {
+                                         'pattern' => [
+                                                        'applebbx.sj.91.com'
+                                                      ],
+                                         'header_name' => 'Host',
+                                         'position' => 'subheader'
+                                       }
+                             },
+                             {
+                               'content' => {
+                                              'pattern' => [
+                                                             '/soft/phone/detail'
+                                                           ],
+                                              'position' => 'http_uri',
+                                              'offset' => '0'
+                                            }
+                             }
+                           ],
+                           [
+                             {
+                               'ac' => {
+                                         'pattern' => [
+                                                        'app.msn.com.cn'
+                                                      ],
+                                         'header_name' => 'Host',
+                                         'position' => 'subheader'
+                                       }
+                             }
+                           ]
+                         ],
+          'tunnel' => 'false',
+          'l4protocol' => 'tcp',
+          'appclass_cmcc' => 'Other_Service//91_Assistant',
+          'manufacture' => 'Baidu',
+          'performance' => '30'
+        };
