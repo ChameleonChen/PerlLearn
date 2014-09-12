@@ -1,0 +1,52 @@
+  ######service_tree info######
+  service_tree_version: 1
+  appclass: IM//Tencent_QQ
+  appclass_cmcc: IM//Tencent_QQ
+  
+  ######base info######
+  name: 
+    en: Tencent_QQ_Login_HTTP_1
+    cn: 腾讯QQ登录HTTP特征1
+  desc: 
+    en: Tencent QQ Login
+    cn: 腾讯QQ登录
+  desc_version: 1
+  detect_version: 1
+  fidelity: 50
+  popularity : 100
+  performance: 30
+  enable: true
+  priority: 20
+  
+  ######extend info######
+  tunnel: false
+  encrypt: false
+  
+  ######detect info######
+  rule_type: ac-sig
+  l4protocol: tcp
+  rule_option:
+    session_dir : request
+    app: http
+    http_method:
+      pattern:
+        - post
+  signature:
+    -
+      -
+        ac:
+          pattern: 
+            - qq
+          position: subheader
+          header_name: Host
+      -
+        regex:
+          pcre: 
+            - (?is)web\d*\.qq\.com
+          position: subheader
+          header_name: Host
+      -
+        regex:
+          pcre: 
+            - (?is)^/channel/login
+          position: http_uri
