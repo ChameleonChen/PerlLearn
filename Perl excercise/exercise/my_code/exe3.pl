@@ -1,0 +1,39 @@
+#!usr/bin/perl
+
+use strict;
+use YAML::Syck;
+use Data::Dumper;
+
+main();
+
+sub main() {
+	
+}
+
+sub check() {
+    my $file;
+    
+    $file = $ARGV[0];
+  	if (!-e $file) {
+  		&error("the txt file is not exsit\n");
+  	}
+  	
+  	my $fileP = LoadFile($file);
+  	my %txtHash = %$fileP;
+  	
+  	&check_signature($txtHash{"signature"});
+}
+
+sub check_signature() {
+	my (@sigs) = @_;
+	
+	foreach my $sig (@sigs) {
+		  
+	}
+}
+
+sub error() {
+	my $str = @_;
+	print "exe3: ".$str."\n";
+	exit;
+}
